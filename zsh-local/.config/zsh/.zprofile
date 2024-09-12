@@ -1,0 +1,1 @@
+../../../zsh-global/zsh/zprofile
