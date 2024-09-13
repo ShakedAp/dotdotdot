@@ -19,6 +19,7 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect '^[[Z' reverse-menu-complete
 
 # Initialize the zsh completion system
 autoload -U compinit; compinit
@@ -49,6 +50,7 @@ zstyle ':completion:*' complete true
 zle -C alias-expension complete-word _generic
 bindkey '^Xa' alias-expension
 zstyle ':completion:alias-expension:*' completer _expand_alias
+zstyle ':completion:*' keep-prefix true        # Keep the prefix when tring to expand
 
 # Use cache for commands using cache
 zstyle ':completion:*' use-cache on
@@ -73,8 +75,13 @@ zstyle ':completion:*:*:*:*:descriptions' format '%F{blue}-- %D %d --%f'
 zstyle ':completion:*:*:*:*:messages' format ' %F{purple} -- %d --%f'
 zstyle ':completion:*:*:*:*:warnings' format ' %F{red}-- no matches found --%f'
 
-# Keep the prefix when tring to expand
-zstyle ':completion:*' keep-prefix true
+# Set completion to be in good groups (named after the tags)
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:*:-command-:*:*' group-order aliases builtins functions commands
+
+# Expand // to /, instead of /*/, to be more compliant with UNIX
+zstyle ':completion:*' squeeze-slashes true
+
 
 # GENERAL QoL IMPROVEMETNS
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
