@@ -44,7 +44,7 @@ source $DOTFILE_REPO_PATH/zsh/config/other/omz/prompt_info_functions.zsh
 source $DOTFILE_REPO_PATH/zsh/config/other/omz/async_prompt.zsh
 source $DOTFILE_REPO_PATH/zsh/config/other/omz/git.zsh
 # select theme
-source $DOTFILE_REPO_PATH/zsh/config/other/omz/themes/simple
+source $DOTFILE_REPO_PATH/zsh/config/other/omz/themes/gnzh
 
 # +------------+
 # | COMPLETION |
