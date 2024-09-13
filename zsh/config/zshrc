@@ -35,7 +35,6 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # +--------+
 # | PROMPT |
 # +--------+
-setopt PROMPT_SUBST              # Allow the prompts to be substituted to create good looking prompts.
 source $DOTFILE_REPO_PATH/zsh/config/other/omz/nvm.zsh
 source $DOTFILE_REPO_PATH/zsh/config/other/omz/bzr.zsh
 source $DOTFILE_REPO_PATH/zsh/config/other/omz/theme-and-appearance.zsh

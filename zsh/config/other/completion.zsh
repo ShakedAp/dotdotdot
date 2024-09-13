@@ -82,6 +82,10 @@ zstyle ':completion:*:*:-command-:*:*' group-order aliases builtins functions co
 # Expand // to /, instead of /*/, to be more compliant with UNIX
 zstyle ':completion:*' squeeze-slashes true
 
+ #disable auto correct
+unsetopt correct_all
+unsetopt correct
+
 
 # GENERAL QoL IMPROVEMETNS
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'

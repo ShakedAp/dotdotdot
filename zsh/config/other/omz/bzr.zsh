@@ -8,3 +8,4 @@ function bzr_prompt_info() {
 		echo "$ZSH_THEME_SCM_PROMPT_PREFIX$BZR_CB$BZR_DIRTY$ZSH_THEME_GIT_PROMPT_SUFFIX"
 	fi
 }
+

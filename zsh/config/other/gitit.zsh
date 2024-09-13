@@ -282,3 +282,4 @@ gitit() {
   else git_open_file $1 $2
   fi
 }
+

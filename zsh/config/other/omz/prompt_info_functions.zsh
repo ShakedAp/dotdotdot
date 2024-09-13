@@ -31,3 +31,4 @@ function rvm_prompt_info() {
 function ruby_prompt_info() {
   echo $(rvm_prompt_info || rbenv_prompt_info || chruby_prompt_info)
 }
+

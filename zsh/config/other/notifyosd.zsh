@@ -56,3 +56,4 @@ function notifyosd-preexec() {
 
 # make sure this plays nicely with any existing preexec
 preexec_functions+=( notifyosd-preexec )
+

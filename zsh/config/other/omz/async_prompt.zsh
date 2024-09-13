@@ -142,3 +142,4 @@ function _omz_async_callback() {
 
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd _omz_async_request
+
