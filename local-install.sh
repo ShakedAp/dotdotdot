@@ -5,7 +5,7 @@ SCRIPT_DIR="$( cd -- "$SCRIPT_RELDIR" &> /dev/null && pwd 2> /dev/null; )";
 
 echo Installing the configurations locally.
 
-mkdir -p $HOME/.config
+mkdir -p $HOME/.config/zsh
 
 
 # Using GNU stow to install dotfiles

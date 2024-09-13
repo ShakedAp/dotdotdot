@@ -5,6 +5,9 @@ SCRIPT_DIR="$( cd -- "$SCRIPT_RELDIR" &> /dev/null && pwd 2> /dev/null; )";
 
 echo Installing the configurations globally.
 
+mkdir -p $HOME/.config/zsh
+echo '#Local zsh config' > $HOME/.config/zsh/.zshrc
+
 # Using GNU stow to install dotfiles
 #
 # Stow will create symlinks from the 'package' (in our case, each configuration)
