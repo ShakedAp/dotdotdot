@@ -17,5 +17,5 @@ mkdir -p $HOME/.config/zsh
 # will create a symlink "/etc/dir" to "my-package/dir"
 
 # Installing ZSH
-stow -nv --target $HOME --dir $SCRIPT_DIR/../zsh local-layout
+stow --target $HOME --dir $SCRIPT_DIR/../zsh local-layout
 

@@ -77,6 +77,11 @@ else
     echo $fg[red]"Couldn't find the command 'fzf'."
 fi
 
+# +---------+
+# | ALIASES |
+# +---------+
+source $DOTFILE_REPO_PATH/zsh/config/other/aliases.sh
+
 # this must be last.
 # +---------------------+
 # | SYNTAX HIGHLIGHTING |
