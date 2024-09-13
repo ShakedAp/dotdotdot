@@ -4,6 +4,10 @@
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
 
+# Definitions for configuration layout
+# Change this to full path where the repo is placed
+export DOTFILE_CONFIG_PATH=/etc/dotdotdot
+
 # Definitions for XDG (See XDG Base Directory Specification)
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"

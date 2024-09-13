@@ -17,5 +17,5 @@ echo '#Local zsh config' > $HOME/.config/zsh/.zshrc
 # will create a symlink "/etc/dir" to "my-package/dir"
 
 # Installing ZSH
-stow -nv --target /etc --dir $SCRIPT_DIR zsh-global
+stow -nv --target /etc --dir $SCRIPT_DIR/zsh global-layout
 
