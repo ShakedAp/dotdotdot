@@ -81,6 +81,11 @@ fi
 # +---------+
 source $DOTFILE_REPO_PATH/zsh/config/other/aliases.sh
 
+# +------------------+
+# | Auto Suggestions |
+# +------------------+
+source $DOTFILE_REPO_PATH/zsh/config/other/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # this must be last.
 # +---------------------+
 # | SYNTAX HIGHLIGHTING |
