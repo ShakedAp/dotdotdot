@@ -3,10 +3,10 @@
 SCRIPT_RELDIR=$( dirname -- "${BASH_SOURCE[0]:-$0}"; )
 SCRIPT_DIR="$( cd -- "$SCRIPT_RELDIR" &> /dev/null && pwd 2> /dev/null; )";
 
-echo Installing the configurations locally.
+echo 'Installing the configurations locally.'
+echo 'Make sure fzf is installed (TODO: install dependencies automatically).'
 
 mkdir -p $HOME/.config/zsh
-
 
 # Using GNU stow to install dotfiles
 #
@@ -17,5 +17,5 @@ mkdir -p $HOME/.config/zsh
 # will create a symlink "/etc/dir" to "my-package/dir"
 
 # Installing ZSH
-stow -nv --target ~ --dir $SCRIPT_DIR/zsh local-layout
+stow -nv --target $HOME --dir $SCRIPT_DIR/../zsh local-layout
 
