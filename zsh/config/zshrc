@@ -17,10 +17,10 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # +---------+
 # | ALIASES |
 # +---------+
-source ./other/aliases.sh
+source $DOTFILE_REPO_PATH/zsh/config/other/aliases.sh
 
 # +------------+
 # | COMPLETION |
 # +------------+
-source ./other/completion.zsh
+source $DOTFILE_REPO_PATH/zsh/config/other/completion.zsh
 

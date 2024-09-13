@@ -6,7 +6,7 @@
 
 # Definitions for configuration layout
 # Change this to full path where the repo is placed
-export DOTFILE_CONFIG_PATH=/etc/dotdotdot
+export DOTFILE_REPO_PATH=/etc/dotdotdot
 
 # Definitions for XDG (See XDG Base Directory Specification)
 export XDG_CONFIG_HOME="$HOME/.config"
