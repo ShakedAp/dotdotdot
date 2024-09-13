@@ -7,3 +7,5 @@ alias lls='ls -lahFtr'
 alias la='ls -A'
 alias lc='ls -CF'
 
+alias fzf='fzf --height=90% --reverse --border' # --preview "cat {}"
+

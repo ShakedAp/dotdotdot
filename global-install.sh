@@ -3,6 +3,9 @@
 SCRIPT_RELDIR=$( dirname -- "${BASH_SOURCE[0]:-$0}"; )
 SCRIPT_DIR="$( cd -- "$SCRIPT_RELDIR" &> /dev/null && pwd 2> /dev/null; )";
 
+echo Installing FZF.
+. $SCRIPT_DIR/fzf/install
+
 echo Installing the configurations globally.
 
 mkdir -p $HOME/.config/zsh

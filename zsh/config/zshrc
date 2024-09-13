@@ -3,7 +3,6 @@
 # +------------+
 # | NAVIGATION |
 # +------------+
-
 setopt AUTO_CD              # Go to folder path without using cd.
 
 setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
@@ -17,7 +16,6 @@ setopt EXTENDED_GLOB        # Use extended globbing syntax.
 # +---------+
 # | HISTORY |
 # +---------+
-
 setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
 setopt SHARE_HISTORY             # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
@@ -28,10 +26,11 @@ setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
-# +---------+
-# | ALIASES |
-# +---------+
-source $DOTFILE_REPO_PATH/zsh/config/other/aliases.sh
+# +--------------------+
+# | TIME NOTIFICATIONS |
+# +--------------------+
+# Send notification when command line done.
+# source $DOTFILE_REPO_PATH/zsh/config/other/notifyosd.zsh
 
 # +--------+
 # | PROMPT |
@@ -50,4 +49,37 @@ source $DOTFILE_REPO_PATH/zsh/config/other/omz/themes/gnzh
 # | COMPLETION |
 # +------------+
 source $DOTFILE_REPO_PATH/zsh/config/other/completion.zsh
+
+# +-----+
+# | Git |
+# +-----+
+# Add command gitit to open Github repo in default browser from a local repo.
+# source $DOTFILE_REPO_PATH/zsh/config/other/gitit.zsh
+
+# +---------+
+# | BINDING |
+# +---------+
+source $DOTFILE_REPO_PATH/zsh/config/other/bindings.zsh
+
+# +-----+
+# | FZF |
+# +-----+
+if [ $(command -v "fzf") ]; then
+    if [ -f /usr/share/doc/fzf/examples/completion.zsh ]; then
+        source /usr/share/doc/fzf/examples/completion.zsh
+    fi
+    if [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
+        source /usr/share/doc/fzf/examples/key-bindings.zsh
+    else
+        echo $fg[red]"Couldn't find zsh keybindings for FZF."
+    fi
+else
+    echo $fg[red]"Couldn't find the command 'fzf'."
+fi
+
+# this must be last.
+# +---------------------+
+# | SYNTAX HIGHLIGHTING |
+# +---------------------+
+source $DOTFILE_REPO_PATH/zsh/config/other/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
