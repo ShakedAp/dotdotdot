@@ -29,14 +29,8 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # +--------+
 # | PROMPT |
 # +--------+
-source $DOTFILE_REPO_PATH/zsh/config/other/omz/nvm.zsh
-source $DOTFILE_REPO_PATH/zsh/config/other/omz/bzr.zsh
-source $DOTFILE_REPO_PATH/zsh/config/other/omz/theme-and-appearance.zsh
-source $DOTFILE_REPO_PATH/zsh/config/other/omz/prompt_info_functions.zsh
-source $DOTFILE_REPO_PATH/zsh/config/other/omz/async_prompt.zsh
-source $DOTFILE_REPO_PATH/zsh/config/other/omz/git.zsh
-# select theme
-source $DOTFILE_REPO_PATH/zsh/config/other/omz/themes/gnzh
+# oh-my-posh
+source <(oh-my-posh init zsh --config $PROMPT_THEMES_DIR/avit.omp.json)
 
 # +------------+
 # | COMPLETION |
@@ -58,13 +52,21 @@ source $DOTFILE_REPO_PATH/zsh/config/other/bindings.zsh
 # | FZF |
 # +-----+
 if [ $(command -v "fzf") ]; then
-    if [ -f /usr/share/doc/fzf/examples/completion.zsh ]; then
-        source /usr/share/doc/fzf/examples/completion.zsh
-    fi
-    if [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
-        source /usr/share/doc/fzf/examples/key-bindings.zsh
+
+    fzf --zsh &> /dev/null
+    if [ $? -eq 0 ]; then
+        source <(fzf --zsh)
     else
-        echo $fg[red]"Couldn't find zsh keybindings for 'fzf'."
+
+        if [ -f /usr/share/doc/fzf/examples/completion.zsh ]; then
+            source /usr/share/doc/fzf/examples/completion.zsh
+        fi
+        if [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
+            source /usr/share/doc/fzf/examples/key-bindings.zsh
+        else
+            echo $fg[red]"Couldn't find zsh keybindings for 'fzf'."
+        fi
+
     fi
 else
     echo $fg[red]"Couldn't find the command 'fzf'."
