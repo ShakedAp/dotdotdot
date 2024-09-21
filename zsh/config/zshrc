@@ -14,9 +14,7 @@ setopt CDABLE_VARS          # Change directory to a path stored in a variable.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
 
 # +---------+
-# | HISTORY |
-# +---------+
-setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
+# | HISTORY | +---------+ setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
 setopt SHARE_HISTORY             # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
 setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded again.
@@ -29,7 +27,13 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # +--------+
 # | PROMPT |
 # +--------+
-# no prompt yet
+source $DOTFILE_REPO_PATH/zsh/config/other/powerlevel10k/powerlevel10k.zsh-theme
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # +------------+
 # | COMPLETION |
