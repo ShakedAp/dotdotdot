@@ -70,7 +70,7 @@ if [ $(command -v "fzf") ]; then
     if [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
         source /usr/share/doc/fzf/examples/key-bindings.zsh
     else
-        echo $fg[red]"Couldn't find zsh keybindings for FZF."
+        echo $fg[red]"Couldn't find zsh keybindings for 'fzf'."
     fi
 else
     echo $fg[red]"Couldn't find the command 'fzf'."
