@@ -34,6 +34,7 @@ source $DOTFILE_REPO_PATH/zsh/config/other/powerlevel10k/powerlevel10k.zsh-theme
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+source $DOTFILE_REPO_PATH/zsh/config/other/p10k.zsh
 
 # +------------+
 # | COMPLETION |
