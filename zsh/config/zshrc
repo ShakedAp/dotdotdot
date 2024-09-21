@@ -29,8 +29,7 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # +--------+
 # | PROMPT |
 # +--------+
-# oh-my-posh
-source <(oh-my-posh init zsh --config $PROMPT_THEMES_DIR/avit.omp.json)
+# no prompt yet
 
 # +------------+
 # | COMPLETION |
