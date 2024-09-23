@@ -32,6 +32,7 @@ _comp_options+=(globdots)             # Use completion with hidden files
 
 # setopt GLOB_COMPLETE      # Show autocompletion menu with globs
 setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
+unsetopt FLOW_CONTROL       # Disable flow control
 setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
 setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
 
@@ -45,6 +46,9 @@ setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
 zstyle ':completion:*' completer _extensions _complete _approximate
 # Complete the alias when _expand_alias is used as a function
 zstyle ':completion:*' complete true
+
+# Do not enter tab character when pressing tab in empty line
+zstyle ':completion:*' insert-tab false
 
 # Alias expansion
 zle -C alias-expension complete-word _generic
