@@ -19,7 +19,7 @@ export DOTFILE_REPO_PATH=/etc/dotdotdot
 chsh -s $(which zsh)
 ```
   
-3. Run the installation script. This can either be local (for the current user) installation, or global installtion.
+3. Run the installation script. This can either be local (for the current user) installation, or global installtion. Make sure to backup anything that's worth keeping before running this script.
 ```
 # Install only for current user
 ./utils/local-install.sh
