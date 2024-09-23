@@ -35,7 +35,7 @@ chsh -s $(which zsh)
 ### Powerlevel10k
 
 In order to make sure `powerlevel10k` is working properly `gitstatusd` needs to be fetched.  
-It should be placed at the following path:  
+It should be placed at the following path (the binary looks something like this `gitstatusd-linux-x86_64`):  
 ```
 ${GITSTATUS_CACHE_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/gitstatus}
 ```
