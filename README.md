@@ -45,3 +45,11 @@ POWERLEVEL9K_DISABLE_GITSTATUS=true
 ```
 It should download it automatically, with internet connection.  
 
+## TODO
+  
+- Nvim config
+- Vim config
+- Tmux config
+- Bash config
+- Converter from vim config to vscode config
+
