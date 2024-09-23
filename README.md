@@ -29,3 +29,19 @@ chsh -s $(which zsh)
   
 4. Update repo when necessary. The configurations are managed when stow, so pulling the git reposity updates the configurations accross the system.
   
+
+## ZSH
+
+### Powerlevel10k
+
+In order to make sure `powerlevel10k` is working properly `gitstatusd` needs to be fetched.  
+It should be placed at the following path:  
+```
+${GITSTATUS_CACHE_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/gitstatus}
+```
+If there is none you can try disabling it:  
+```
+POWERLEVEL9K_DISABLE_GITSTATUS=true
+```
+It should download it automatically, with internet connection.  
+
