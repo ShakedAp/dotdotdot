@@ -46,7 +46,9 @@ POWERLEVEL9K_DISABLE_GITSTATUS=true
 It should download it automatically, with internet connection.  
 
 ## TODO
-  
+
+- Add colored-man-pages plugin
+- Try/Add zoxide
 - Nvim config
 - Vim config
 - Tmux config
